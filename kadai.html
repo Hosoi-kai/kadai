@@ -9,13 +9,31 @@
         <li>タスク：<input type="text" id="Task" style="width: 200px;height: 50px;"></li>
         <li><button type="button" onclick="buttonClick()">登録</button></li>
     </ul>
+    <p id="submit_user"></p><br>
+    <p id="submit_task"></p>
+
     <script>
+
+    let textbox = []
+
       function buttonClick(){
-        let textbox_user = document.getElementById("User")
-        let textbox_task = document.getElementById("Task")
+
+        textbox_user = document.getElementById("User").value;
+        textbox_task = document.getElementById("Task").value;
+
+        textbox = [name = textbox_user,task = textbox_task]
+
         console.log(textbox_user.value)
-        console.log(textbox_task.value)
+        console.log(textbox_user.value)
+
+        var sampleArea = document.getElementById("submit_user");
+        sampleArea.insertAdjacentHTML("beforebegin",textbox_user );
+
+        var sampleArea = document.getElementById("submit_user");
+        sampleArea.insertAdjacentHTML("beforebegin",textbox_task );
+
       };
+
 
     </script>
     
