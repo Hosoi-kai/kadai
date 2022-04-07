@@ -21,6 +21,15 @@
       const name = document.querySelector("#name");
       const task = document.querySelector("#task");
       tasksList.push({ name: name.value, task: task.value });
+      var sampleArea = document.getElementById("todo-list");
+      t = tasksList.length
+      console.log(t)
+
+      for (let step = t-2; step < t-1; step++) {
+        sampleArea.insertAdjacentHTML("beforebegin", `${t}: ${tasksList.name}, ${tasksList.task}`)
+    }
+    };
+
     </script>
     
   </body>
