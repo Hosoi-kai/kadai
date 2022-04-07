@@ -4,31 +4,23 @@
     <title>Todoapp</title>
   </head>
   <body>
-    <ul>
-        <li>ユーザー名:<input type="text" id="name"></li>
-        <li>タスク：<input type="text" id="task" style="width: 200px;height: 50px;"></li>
-        <li><button type="button" onclick="onClickButton">登録</button></li>
-    </ul>
+    <form>
+      <ul>
+          <li>ユーザー名:<input type="text" id="name"></li>
+          <li>タスク：<input type="text" id="task" style="width: 200px;height: 50px;"></li>
+          <li><button type="button" onclick="onClickButton()">登録</button></li>
+      </ul>
+    </form>
     <div id="todo-list"></div>
 
     <script>
 
-    let textbox = []
-
     const tasksList = [];
 
     const onClickButton = () => {
-        const name = document.querySelector("#name");
-        const task = document.querySelector("#task");
-        console.log(name.value, task.value);
-    };
-
-    const name = document.querySelector("#name");
-    const task = document.querySelector("#task");
-
-    tasksList.push({ name: name.value, task: task.value });
-    tasksList.forEach((t, idx) => console.log(`${idx}: ${t.name}, ${t.task}`));
-
+      const name = document.querySelector("#name");
+      const task = document.querySelector("#task");
+      tasksList.push({ name: name.value, task: task.value });
     </script>
     
   </body>
